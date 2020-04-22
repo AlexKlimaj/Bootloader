@@ -78,6 +78,7 @@ TARGETS	= \
 	modalai_fc_v1_bl \
 	st_nucleo_f412zg \
 	ark_bms_v1_bl \
+	uvify_core_bl
 
 all:	$(TARGETS) sizes
 
@@ -149,6 +150,9 @@ smartap_pro_bl:$(MAKEFILE_LIST) $(LIBOPENCM3)
 
 modalai_fc_v1_bl:$(MAKEFILE_LIST) $(LIBOPENCM3)
 	${MAKE} ${MKFLAGS} -f  Makefile.f7 TARGET_HW=MODALAI_FC_V1 LINKER_FILE=stm32f7.ld TARGET_FILE_NAME=$@
+
+uvify_core_bl:$(MAKEFILE_LIST) $(LIBOPENCM3)
+	${MAKE} ${MKFLAGS} -f  Makefile.f4 TARGET_HW=UVIFY_CORE LINKER_FILE=stm32f4.ld TARGET_FILE_NAME=$@
 
 st_nucleo_f412zg:$(MAKEFILE_LIST) $(LIBOPENCM3)
 	${MAKE} ${MKFLAGS} -f  Makefile.f4 TARGET_HW=ST_NUCLEO_F412ZG LINKER_FILE=stm32f4.ld TARGET_FILE_NAME=$@

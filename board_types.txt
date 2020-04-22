@@ -6,6 +6,7 @@ TARGET_HW_PX4_FMU_V2                    9
 TARGET_HW_PX4_FMU_V3                    9 # same as FMU_V2
 TARGET_HW_PX4_FMU_V4                   11
 TARGET_HW_PX4_FMU_V4_PRO               13
+TARGET_HW_UVIFY_CORE		       20
 TARGET_HW_PX4_FMU_V5                   50
 TARGET_HW_PX4_FMU_V5X                  51
 TARGET_HW_PX4_FMU_V6                   52
@@ -27,6 +28,7 @@ TARGET_HW_AV_V1                        29
 TARGET_HW_KAKUTEF7                    123
 TARGET_HW_SMARTAP_PRO                  32
 TARGET_HW_MODALAI_FC_V1             41775
+TARGET_HW_HOLYBRO_PIX32_V5                  78
 
 Reserved  PX4 [BL] FMU v5X.x           51
 Reserved "PX4 [BL] FMU v6.x"           52
@@ -38,6 +40,9 @@ EXT_HW_RADIOLINK_MINI_PIX               3
 # NOTE: the full range from 1000 to 1999 (inclusive) is reserved for
 # use by the ArduPilot bootloader. Do not allocate IDs in this range
 # except via changes to the ArduPilot code
+
+# Do not allocate IDs in the range 1000 to 1999 except via a PR
+# against https://github.com/ArduPilot/Bootloader
 
 # values starting with AP_ are implemented in the ArduPilot bootloader
 # https://github.com/ArduPilot/ardupilot/tree/master/Tools/AP_Bootloader
@@ -85,3 +90,6 @@ AP_HW_FRSKY_R9                       1008
 AP_HW_CUAV_NORA                      1009
 AP_HW_CUAV_X7_PRO                    1010
 AP_HW_SUCCEXF4                       1011
+AP_HW_LIGHTSPARKMINI                 1012
+AP_HW_MATEKH743                      1013
+AP_HW_MRO_CONTROL_ZERO_PR            1014
